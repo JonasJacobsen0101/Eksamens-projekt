@@ -1,11 +1,12 @@
 int number = 1; //Tallet der bliver checket om er et primtal
 int dividor = 1; //Tallet der bliver brugt til at dividere number
 long end = 0; //Bliver brugt til at definere et interval at finde tal i
-
+String str = "";
 boolean running = true;
 while(running){
     if (number == 3){
     print(number); println(" Is a prime");
+    str = str+number+" ";
     number++;
     dividor = 1;
     end++;
@@ -16,6 +17,7 @@ while(running){
   }
   if (dividor == (number/2)){
     print(number); println(" Is a prime");
+    str = str+number+" ";
     number++;
     dividor = 1;
     end++;
@@ -24,9 +26,13 @@ while(running){
     print("Done");
     running = false;
   }
-  if (end == 10000){//Brug hvis du vil have en præcis mængde primtal
-  print("Done123");
+  if (end == 1000){//Brug hvis du vil have en præcis mængde primtal
+  print("Done");
   running = false;
   }
   dividor++;
 }
+String[] list = split(str, ' ');
+
+// Writes the strings to a file, each on a separate line
+saveStrings("Primes.txt", list);
