@@ -1,71 +1,32 @@
-int prime = 0; //Tallet jeg vil checke for primtal
-int f1 = 2;
-int f2 = 2;
-int end = 1000;
-void setup(){
-  frameRate(100000000);
-}
-void draw(){
-    if ((prime % 2) == 0){
-    print(prime); println(" Is not a prime number*");
-    prime++;
-    f1 = 2;
-    f2 = 2;
+int number = 1; //Tallet der bliver checket om er et primtal
+int dividor = 1; //Tallet der bliver brugt til at dividere number
+long end = 0; //Bliver brugt til at definere et interval at finde tal i
+
+boolean running = true;
+while(running){
+    if (number == 3){
+    print(number); println(" Is a prime");
+    number++;
+    dividor = 1;
+    end++;
   }
-  if (prime % 3 == 0){
-    print(prime); println(" Is not a prime number*");
-    prime++;
-    f1 = 2;
-    f2 = 2;
+  if (number % dividor == 0){
+    dividor = 1;
+    number++;
   }
-  if ((prime % 5) == 0 && prime != 5){
-    print(prime); println(" Is not a prime number*");
-    prime++;
-    f1 = 2;
-    f2 = 2;
+  if (dividor == (number/2)){
+    print(number); println(" Is a prime");
+    number++;
+    dividor = 1;
+    end++;
   }
-  if (prime <= 1) {// Algoritmen kan ikke finde ud af tal under 4 derfor er de hard coded ind
-    print(prime); println(" Is not a prime number");
-    prime++;
-    f1 = 2;
-    f2 = 2;
+  if (number == 1000000000){//Brug hvis du vil have alle primtal mellem to tal
+    print("Done");
+    running = false;
   }
-  if (f1 == prime){
-    f2++;
-    f1 = 2;
+  if (end == 10000000000){//Brug hvis du vil have en præcis mængde primtal
+  print("Done123");
+  running = false;
   }
-  if (f1*f2 == prime) {
-    print(prime); println(" Is not a prime number");
-    prime++;
-    f1 = 2;
-    f2 = 2;
-  }
-  if (f2 == (prime)) {
-    print(prime); println(" Is a prime number");
-    prime++;
-    f1 = 2;
-    f2 = 2;
-  }
-  if (prime > end){
-    noLoop();
-  }
-    if (prime == 2){
-    print(prime); println(" Is a prime number");
-    prime++;
-    f1 = 2;
-    f2 = 2;
-  }
-  if (prime == 3){
-    print(prime); println(" Is a prime number");
-    prime++;
-    f1 = 2;
-    f2 = 2;
-  }
-    if (prime == 5){
-    print(prime); println(" Is a prime number");
-    prime++;
-    f1 = 2;
-    f2 = 2;
-  }
-    f1++;   
+  dividor++;
 }
