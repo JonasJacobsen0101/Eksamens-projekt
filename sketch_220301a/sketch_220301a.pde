@@ -1,5 +1,5 @@
-int number = 1; //Tallet der bliver checket om er et primtal
-int dividor = 1; //Tallet der bliver brugt til at dividere number
+long number = 1; //Tallet der bliver checket om er et primtal
+long dividor = 1; //Tallet der bliver brugt til at dividere number
 long end = 0; //Bliver brugt til at definere et interval at finde tal i
 String str = "";
 boolean running = true;
@@ -26,7 +26,7 @@ while(running){
     print("Done");
     running = false;
   }
-  if (end == 1000){//Brug hvis du vil have en præcis mængde primtal
+  if (end == 100000){//Brug hvis du vil have en præcis mængde primtal
   print("Done");
   running = false;
   }
