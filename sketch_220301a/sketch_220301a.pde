@@ -1,36 +1,48 @@
-long number = 1; //Tallet der bliver checket om er et primtal
-long dividor = 1; //Tallet der bliver brugt til at dividere number
-long end = 0; //Bliver brugt til at definere et interval at finde tal i
+import java.math.BigInteger;
+BigInteger b1 = new BigInteger ("2"); // dividor
+BigInteger b2 = new BigInteger ("1"); //end
+BigInteger b3 = new BigInteger ("2"); // number
+BigInteger b4 = new BigInteger ("1"); //1
+BigInteger b5 = new BigInteger ("0"); //0
+BigInteger b6 = new BigInteger ("2"); //2
+BigInteger b7 = new BigInteger ("100000"); //prime amount
+BigInteger b8 = new BigInteger ("3"); //3
+BigInteger b9 = new BigInteger ("10000000000000000000000000"); //number amount
+BigInteger rest = new BigInteger ("0");
+
 String str = "";
 boolean running = true;
 while(running){
-    if (number == 3){
-    print(number); println(" Is a prime");
-    str = str+number+" ";
-    number++;
-    dividor = 1;
-    end++;
+  if (b3.equals(b8)){
+    str = str+b3+" ";
+    b3 = b3.add(b4);
+    b1 = b4;
+    b2 = b2.add(b4);
+    
   }
-  if (number % dividor == 0){
-    dividor = 1;
-    number++;
+  BigInteger[] bi = b3.divideAndRemainder(b1);
+  rest = bi[1];
+  if (rest.equals(b5)){
+    b1=b4;
+    b3 = b3.add(b4);
   }
-  if (dividor == (number/2)){
-    print(number); println(" Is a prime");
-    str = str+number+" ";
-    number++;
-    dividor = 1;
-    end++;
+  if (b1.equals(b3.divide(b6))){
+    str = str+b3+" ";
+    b3 = b3.add(b4);
+    b1 = b4;
+    b2 = b2.add(b4);
   }
-  if (number == 1000000000){//Brug hvis du vil have alle primtal mellem to tal
-    print("Done");
+  if (b3.equals(b9)){//Brug hvis du vil have alle primtal mellem to tal
+    print("Done*");
     running = false;
   }
-  if (end == 100000){//Brug hvis du vil have en præcis mængde primtal
-  print("Done");
+  if (b2.equals(b7)){//Brug hvis du vil have en præcis mængde primtal
+  println("Done");
+  println((millis()-0.5)*0.001);
   running = false;
   }
-  dividor++;
+  b1 = b1.add(b4);
+  
 }
 String[] list = split(str, ' ');
 
