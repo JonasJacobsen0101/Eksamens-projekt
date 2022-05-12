@@ -5,7 +5,7 @@ BigInteger b3 = new BigInteger ("2"); // Tallet der bliver checket for om det er
 BigInteger b4 = new BigInteger ("1"); // Konstant 1
 BigInteger b5 = new BigInteger ("0"); // Konstant 0
 BigInteger b6 = new BigInteger ("2"); // Konstant 2
-BigInteger b7 = new BigInteger ("10000"); // Bruges til antal primtal ønskes
+BigInteger b7 = new BigInteger ("100000000"); // Bruges til antal primtal ønskes
 BigInteger b8 = new BigInteger ("3"); // Konstant 3
 BigInteger b9 = new BigInteger ("1000000000"); // Bruges til højeste tal der skal checkes for primtal. 
 BigInteger rest = new BigInteger ("0"); // Konstant 0 
@@ -33,12 +33,12 @@ while(running){ // Initierer Integer loop.
     dividor = 1;
     end++; // End går op da vi har har fundet et primtal og end holder styr på antal primtal fundet. 
   }
-  if (number == 100000000){//Brug hvis du vil have alle primtal mellem to tal
-    print("Done");
+  if (number == 100000000){//Brug hvis du vil have alle primtal mellem to tal.
+    println("Done");
     running = false;
   }
-  if (end == 10000){//Brug hvis du vil have en præcis mængde primtal
-  print("Done");
+  if (end == 1000){//Brug hvis du vil have en præcis mængde primtal.
+  println("Done");
   running = false;
   }
   dividor++;
@@ -59,11 +59,11 @@ while(running){ // Initierer Integer loop.
     b2 = b2.add(b4);
   }
   if (b3.equals(b9)){//Brug hvis du vil have alle primtal mellem to tal
-    print("Done");
+    print("Done2");
     running2 = false;
   }
   if (b2.equals(b7)){//Brug hvis du vil have en præcis mængde primtal
-  println("Done");
+  println("Done2");
   println((millis()-0.5)*0.001);
   running2 = false;
   }
