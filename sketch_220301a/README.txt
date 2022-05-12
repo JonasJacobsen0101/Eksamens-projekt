@@ -12,4 +12,8 @@ Hvis for eksempel alle primtal imellem 0 og 100 ønskes, ændres if statementen 
 samme kan gøres for et interval hvor vi vil have alle primtal imellem 50 til 100 så har vi det samme som den lige over denne, hvor vi bare ænderer variablen
 "number" til 50. 
 
-Hvis det tal du checker er over 1000000 skal der printes "DoneDone på skermen istedet for bare "Done"
+Hvis det tal du checker er over 1000000 skal der printes "Done, Done2, på skermen istedet for bare "Done"
+
+Programmet i sin helhed er produceret af Jonas Jacobsen, med libraries produceret af Oracle.
+
+Al brug af denne kode er tilladt. 
