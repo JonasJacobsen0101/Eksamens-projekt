@@ -14,6 +14,9 @@ samme kan gøres for et interval hvor vi vil have alle primtal imellem 50 til 10
 
 Hvis det tal du checker er over 1000000 skal der printes "Done, Done2, på skermen istedet for bare "Done"
 
+Efter programmet er færdig, ved at printe "Done" eller "Done Done2" bliver der skabt et tekst dokument i den mappe som programmet sidder i. 
+med alle tallene på række. 
+
 Programmet i sin helhed er produceret af Jonas Jacobsen, med libraries produceret af Oracle.
 
 Al brug af denne kode er tilladt. 
